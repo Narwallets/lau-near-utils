@@ -1,6 +1,6 @@
 import {readFileSync, writeFileSync} from "fs"
 import path from "path"
-import { isObject, isString, JSONPrettify } from "js-utils"
+import { isObject, isString, JSONPrettify } from "lau-js-utils"
 import { replacer } from "./util"
 
 

@@ -9,7 +9,7 @@ import { Logger } from "./logger"
 import {_ContractSpec} from "./contract"
 import { readFileSync } from "fs"
 import path from "path"
-import { assert, isString } from "js-utils"
+import { assert, isString } from "lau-js-utils"
 import {__dirname} from "./init"
 
 

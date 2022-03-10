@@ -1,7 +1,7 @@
 import { NetworkConfig } from "./config";
 import { copyFile } from "fs";
 import {keyStores, connect, Near} from "near-api-js"
-import {hasValue} from "js-utils"
+import {hasValue} from "lau-js-utils"
 
 export class NearConncetion {
   keyStore = new keyStores.InMemoryKeyStore()

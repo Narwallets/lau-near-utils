@@ -1,6 +1,6 @@
 import { readdirSync } from "fs"
 import path from "path"
-import {assert, hasValue} from "js-utils"
+import {assert, hasValue} from "lau-js-utils"
 import "./init"
 import { readLine } from "./interactiveConsole.js"
 import { Logger } from "./logger.js"

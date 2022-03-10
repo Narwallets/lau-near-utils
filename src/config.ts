@@ -1,7 +1,6 @@
 import { existsSync, mkdirSync, readFileSync } from "fs"
 import path from "path"
 import { NetworkId } from "./near-connection"
-import { hasValue, assert } from "js-utils"
 import {__dirname} from "./init"
 
 

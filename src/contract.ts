@@ -1,7 +1,7 @@
 import BN from "bn.js"
 import { Account } from "near-api-js"
 import {getTransactionLastResult, FinalExecutionStatus, FinalExecutionOutcome} from "near-api-js/lib/providers/provider"
-import {asConst, hasValue, isString} from "js-utils"
+import {asConst, hasValue, isString} from "lau-js-utils"
 
 export class Contract<T extends _ContractSpec, S extends Account | string> {
 
