@@ -6,7 +6,6 @@
     "prepare": "tsc"
   },
   "main": "out/index.js",
-  "type": "module",
   "author": "Lautaro C",
   "dependencies": {
     "bn.js": "^5.2.0",
