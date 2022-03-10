@@ -10,7 +10,7 @@
   "dependencies": {
     "bn.js": "^5.2.0",
     "near-api-js": "^0.43.1",
-    "js-utils": "git+https://github.com/lau-bin/js-utils.git",
+    "js-utils": "git+https://github.com/Narwallets/lau-js-utils.git",
     "typescript": "^4.5.2"
   },
   "devDependencies": {
