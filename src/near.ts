@@ -60,7 +60,7 @@ export async function createSubAccount(masterAccount: Account, connection: NearC
   let run = async () => {
     // get final name of account
     if (name) {
-      if (props?.nameSuffixLength) {
+      if (props && props.nameSuffixLength) {
         let length = NAMED_ACCOUNT_MAX_LENGTH - masterAccount.accountId.length - name.length - 1
         length = length > props.nameSuffixLength ? props.nameSuffixLength : length
         assert(length > 0, ACCOUNT_ID_TOO_BIG + " is " + length)
@@ -73,12 +73,12 @@ export async function createSubAccount(masterAccount: Account, connection: NearC
       }
     }
     else {
-      accountName = getSubAccName(makeRandomid(props?.accountIdlength || NAMED_ACCOUNT_MAX_LENGTH - masterAccount.accountId.length), masterAccount.accountId)
+      accountName = getSubAccName(makeRandomid((props && props.accountIdlength) || NAMED_ACCOUNT_MAX_LENGTH - masterAccount.accountId.length), masterAccount.accountId)
     }
 
     let masterKey = await connection.keyStore.getKey(connection.networkId, masterAccount.accountId)
     await connection.keyStore.setKey(connection.networkId, accountName, masterKey)
-    let transfer = props?.near ? utils.format.parseNearAmount(String(props.near)) : "0"
+    let transfer = (props && props.near) ? utils.format.parseNearAmount(String(props.near)) : "0"
     await masterAccount.createAccount(
       accountName,
       masterKey.getPublicKey(),

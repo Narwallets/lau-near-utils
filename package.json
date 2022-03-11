@@ -1,6 +1,6 @@
 {
   "name": "lau-near-utils",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Near utilities",
   "scripts": {
     "prepare": "tsc"
