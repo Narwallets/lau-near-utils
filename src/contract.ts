@@ -28,7 +28,7 @@ export class Contract<T extends _ContractSpec, S extends Account | string> {
         const element = {
           contractId: this.accountId,
           methodName,
-          args: args ?? {},
+          args: args||{},
           gas,
           attachedDeposit
         } 
