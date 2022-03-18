@@ -24,8 +24,16 @@ export function getConfig<T extends Network>(network: T): NetworkConfig<Network>
         }
       } as any
       break
+    case "mainnet":
+      config = {
+        networkId: "mainnet",
+        nodeUrl: "https://rpc.mainnet.near.org",
+        existentAcc: {
+        }
+      } as any
+      break
     default:
-      throw Error("network type not implemented")
+      throw Error(`unknown network ${network}`)
   }
 
   return config
